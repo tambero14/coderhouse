@@ -1,0 +1,171 @@
+/* primero vamos a resetear los valores por default */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+
+/* estilos generales del <body> */
+body {
+    background-color: #23272A;
+}
+
+
+
+/* estilos generales del <header> */
+
+header {
+    display: flex;
+    background-color: #0E141B;
+    justify-content: space-between;
+    padding: 10px 30px;
+    align-items: center;
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-color: aliceblue;
+}
+
+header nav ul {
+    display: flex;
+    color: whitesmoke;
+    list-style: none;   
+    gap: 50px;
+}
+
+header nav ul li a:link, header nav ul li a:visited {
+    font-family: "Lexend Deca", sans-serif;
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: small;
+    text-decoration: none;
+}
+
+header nav ul li a:hover, header nav ul li a:active {
+    color: crimson;
+}
+
+
+
+/* fuentes y estilos */
+
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 500%;
+    color: whitesmoke;
+    text-align: center
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, fr);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+main h2.puesto {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 200%;
+    color: whitesmoke;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+
+main h3.empresa {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 550;
+    font-style:normal;
+    font-size: 130%;
+    color: whitesmoke;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+main p.descripcion {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 100%;
+    color: whitesmoke;
+    text-align: justify;
+}
+
+main h1 {
+    grid-column: span 1;
+}
+
+main .exp1, main .exp2, main .exp3, main .exp4 {
+    margin-bottom: 50px;
+}
+
+main .exp1  img, main .exp2 img, main .exp3 img, main .exp4 img { 
+    display: none;
+} 
+
+main .exp1 h2.puesto, main .exp2 h2.puesto, main .exp3 h2.puesto, main .exp4 h2.puesto  {
+    grid-row: span 1;
+}
+
+main .exp1 h3.empresa, main .exp2 h3.empresa, main .exp3 h3.empresa, main .exp4 h3.empresa {
+    grid-row: span 1;
+}
+
+main .exp1 p.descripcion,  main .exp2 p.descripcion,  main .exp3 p.descripcion,  main .exp4 p.descripcion  {
+    grid-row: span 1;
+}
+
+
+/* mq para desktop pc*/
+@media screen and (min-width: 1024px) {
+    
+    /*main .exp1 img, main .exp2 img, main .exp3 img, main .exp img    {
+        display: block;
+    }
+    */
+    
+    main {
+        grid-template-columns: repeat(2, 30% 35%);
+        grid-template-rows: repeat(5, auto);
+    }
+
+    main div.titulo h1 {
+        grid-row: span 5;
+        margin-top: 150px;
+    }
+
+    main div.exp1 {
+        grid-column: 2;
+        margin-top: 150px;
+        margin-left: 100px;
+
+    }
+
+    main div.exp2 {
+        grid-column: 2;
+        margin-left: 100px;
+    }
+    main div.exp3 {
+        grid-column: 2;
+        margin-left: 100px;
+    }
+    main div.exp4 {
+        grid-column: 2;
+        margin-left: 100px;
+    }
+
+} 
+
+
+

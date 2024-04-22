@@ -1,0 +1,115 @@
+
+/* primero vamos a resetear los valores por default */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+
+/* estilos generales del <body> */
+body {
+    background-color: #23272A;
+}
+
+
+
+/* estilos generales del <header> */
+
+header {
+    background-color: #0E141B;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    align-items: center;
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-color: aliceblue;
+}
+
+
+header nav ul {
+    display: flex;
+    color: whitesmoke;
+    list-style: none;   
+    gap: 50px;
+}
+
+header nav ul li a:link, header nav ul li a:visited {
+    font-family: "Lexend Deca", sans-serif;
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: small;
+    text-decoration: none;
+}
+
+header nav ul li a:hover, header nav ul li a:active {
+    color: crimson;
+}
+
+
+/* estilos de <main> */
+
+
+main {
+    margin: 100px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+
+h1 {
+    margin-top: 10%;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 800%;
+    color: whitesmoke;
+    text-align: center;
+}
+
+
+main h2 {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 500;
+    font-size: 200%;
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 3%
+}
+      
+main p {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 200;
+    font-size: medium;
+    text-align: center;
+    color: whitesmoke;
+    justify-content: left;
+}
+
+main div img {
+    width: 40%;
+    height: 75%;
+
+}
+
+
+/* estilos del footer */
+
+footer {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 800;
+    font-size: smaller;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #0E141B;
+    padding: 10px 20px;
+
+}
