@@ -73,7 +73,7 @@ main div.texto h2 {
   font-size: 200%;
   color: whitesmoke;
   text-align: center;
-  margin-bottom: 150px;
+  margin-bottom: 75px;
 }
 main div.texto p {
   font-family: "Lexend Deca", sans-serif;
@@ -81,7 +81,7 @@ main div.texto p {
   font-style: normal;
   font-size: 100%;
   color: whitesmoke;
-  text-align: center;
+  text-align: justify;
 }
 main .img {
   display: flex;
@@ -93,6 +93,39 @@ main .img img {
   border-style: groove;
   border-radius: 25%;
   border-color: whitesmoke;
+  margin-bottom: 100px;
+}
+
+footer {
+  background-color: #0E141B;
+  display: flex;
+  height: 100px;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+footer p.legal {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 100%;
+  color: whitesmoke;
+}
+footer p.nombre {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100%;
+  color: whitesmoke;
+}
+footer nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+footer nav ul li a img {
+  height: 1.5em;
+  width: 1.5em;
 }
 
 /*# sourceMappingURL=main.css.map */
