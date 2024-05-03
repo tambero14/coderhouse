@@ -1,3 +1,6 @@
+@import "./utilidades/variables";
+
+
 *{
     margin: 0;
     padding: 0;
@@ -5,11 +8,11 @@
 }
 
 body {
-    background-color: #23272A;
+    background-color: $color-main;
 }
    
 header {
-    background-color: #0E141B;
+    background-color: $color-nav-foot;
     display: flex;
     justify-content: space-between;
     padding: 20px 100px;
@@ -31,7 +34,7 @@ header {
         gap: 70px;
         li a:link, li a:visited {
             font-family: "Lexend Deca", sans-serif;
-            color: whitesmoke;
+            color: $color-font;
             font-weight: 500;
             font-size: large;
             text-decoration: none;
@@ -65,30 +68,30 @@ main {
     margin: 50px;
     div.texto h1 {
         margin-top: 10%;
-        font-family: "Bebas Neue", sans-serif;
+        font-family: $titulo-main;
         font-weight: 400;
         font-style: normal;
         font-size: 800%;
-        color: whitesmoke;
+        color: $color-font;
         text-align: center;
     }
 
     div.texto h2 {
-        font-family: "Lexend Deca", sans-serif;
+        font-family: $subtitulo;
         font-weight: 550;
         font-style:normal;
         font-size: 200%;
-        color: whitesmoke;
+        color: $color-font;
         text-align: center;
         margin-bottom: 75px;
     }
 
     div.texto p {
-        font-family: "Lexend Deca", sans-serif;
+        font-family: $parrafo;
         font-weight: 550;
         font-style:normal;
         font-size: 100%;
-        color: whitesmoke;
+        color: $color-font;
         text-align: justify;
     }
 
@@ -108,7 +111,7 @@ main {
 
     // Estilos de footer
     footer {
-        background-color: #0E141B;
+        background-color: $color-nav-foot;
         display: flex;
         height: 100px;
         gap: 40px;
@@ -119,14 +122,14 @@ main {
             font-weight: 200;
             font-style: normal;
             font-size: 100%;
-            color: whitesmoke;
+            color: $color-font;
         }
         p.nombre {
             font-family: "Lexend Deca", sans-serif;
             font-weight: 400;
             font-style: normal;
             font-size: 100%;
-            color: whitesmoke;
+            color: $color-font;
         }
         nav {
             ul {
@@ -144,6 +147,56 @@ main {
                 }
             }
     }
+
+
+
+    // resolución PC desktop
+    @media screen and (min-width: 1024px) {
+        main {
+            display: flex;
+            gap: 300px;
+            div.texto {
+                width: 800px;
+            }
+            div.texto h1, div.texto h2, div.texto p {
+                text-align: left;
+                margin-left: 150px;
+            }
+            div.texto p {
+                font-family: "Libre Baskerville", serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: large;
+                text-decoration: solid;
+                text-align: justify;
+            }
+            .img {
+                align-items: center;
+                img {
+                    width: 25rem;
+                    height: 25rem;
+                    border-radius: 0%;
+                    border-style:groove;
+                    border-color: whitesmoke;
+                }
+            }
+        }
+
+        footer {
+            bottom: 0;
+            position: fixed;
+            width: 100%;
+            background-color: $color-nav-foot;
+            display: flex;
+            height: 75px;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+}
+        
+
 
 
 

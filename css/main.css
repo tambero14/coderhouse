@@ -128,4 +128,47 @@ footer nav ul li a img {
   width: 1.5em;
 }
 
+@media screen and (min-width: 1024px) {
+  main {
+    display: flex;
+    gap: 300px;
+  }
+  main div.texto {
+    width: 800px;
+  }
+  main div.texto h1, main div.texto h2, main div.texto p {
+    text-align: left;
+    margin-left: 150px;
+  }
+  main div.texto p {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+    text-decoration: solid;
+    text-align: justify;
+  }
+  main .img {
+    align-items: center;
+  }
+  main .img img {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 0%;
+    border-style: groove;
+    border-color: whitesmoke;
+  }
+  footer {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #0E141B;
+    display: flex;
+    height: 75px;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
