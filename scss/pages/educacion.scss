@@ -1,0 +1,49 @@
+@import "../utilidades/variables";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    margin: 50px;
+        h1 {
+        margin-top: 10%;
+        font-family: $titulo-main;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 800%;
+        color: $color-font;
+        text-align: center;
+        }
+        section {
+            border: 1px solid white;
+            padding: 20px;
+            div {
+                gap: 10px;
+            }
+        }
+        section div h3 {
+            font-family: $subtitulo;
+            font-weight: 550;
+            font-style:normal;
+            font-size: 200%;
+            color: $color-font;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        section div p.periodo, section div p.establecimiento {
+            font-family: $parrafo;
+            font-weight: 550;
+            font-style:normal;
+            font-size: 100%;
+            color: $color-font;
+            text-align: justify;
+        }
+}

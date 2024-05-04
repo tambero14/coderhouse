@@ -1,0 +1,206 @@
+@import "../utilidades/variables";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $color-main;
+}
+   
+header {
+    background-color: $color-nav-foot;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+    align-items: center;
+
+    // estilos de la imágen de logo para el <nav>
+    img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border-color: aliceblue;    
+    }
+        
+    // estilos para el <nav>
+    nav ul {
+        display: flex;
+        color: whitesmoke;
+        list-style: none;   
+        gap: 70px;
+        li a:link, li a:visited {
+            font-family: "Lexend Deca", sans-serif;
+            color: $color-font;
+            font-weight: 500;
+            font-size: large;
+            text-decoration: none;
+        }
+
+    }
+
+    nav.navbar div.container-fluid div.collapse ul.navbar-nav li.nav-item a.nav-link:hover, li.nav-link a:active {
+        color: crimson;
+    }
+} 
+
+// Acá voy a sobreescribir el estilo de los componentes de bootstrap
+.bg-light {
+    background-color: #0E141B !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: whitesmoke !important;
+}
+
+button.navbar-toggler {
+    background-color: whitesmoke !important;
+}
+
+
+// Estilos de main
+main {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    margin: 50px;
+    div.texto h1 {
+        margin-top: 10%;
+        font-family: $titulo-main;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 800%;
+        color: $color-font;
+        text-align: center;
+    }
+
+    div.texto h2 {
+        font-family: $subtitulo;
+        font-weight: 550;
+        font-style:normal;
+        font-size: 200%;
+        color: $color-font;
+        text-align: center;
+        margin-bottom: 75px;
+    }
+
+    div.texto p {
+        font-family: $parrafo;
+        font-weight: 550;
+        font-style:normal;
+        font-size: 100%;
+        color: $color-font;
+        text-align: justify;
+    }
+
+    .img {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 20rem;
+            height: 20rem;
+            border-style:groove;
+            border-radius: 25%;
+            border-color: whitesmoke;
+            margin-bottom: 100px;
+        }
+    }
+}
+
+    // Estilos de footer
+    footer {
+        background-color: $color-nav-foot;
+        display: flex;
+        height: 100px;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+        p.legal {
+            font-family: "Lexend Deca", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+            font-size: 100%;
+            color: $color-font;
+        }
+        p.nombre {
+            font-family: "Lexend Deca", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 100%;
+            color: $color-font;
+        }
+        nav {
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 15px;
+                    li {
+                        a {
+                            img {
+                                height: 1.5em;
+                                width: 1.5em;
+                            }
+                        }
+                    }
+                }
+            }
+    }
+
+
+
+    // resolución PC desktop
+    @media screen and (min-width: 1024px) {
+        main {
+            display: flex;
+            gap: 300px;
+            div.texto {
+                width: 800px;
+            }
+            div.texto h1, div.texto h2, div.texto p {
+                text-align: left;
+                margin-left: 150px;
+            }
+            div.texto p {
+                font-family: "Libre Baskerville", serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: large;
+                text-decoration: solid;
+                text-align: justify;
+            }
+            .img {
+                align-items: center;
+                img {
+                    width: 23rem;
+                    height: 25rem;
+                    border-radius: 0%;
+                    border-style:groove;
+                    border-color: whitesmoke;
+                }
+            }
+        }
+
+        footer {
+            bottom: 0;
+            position: fixed;
+            width: 100%;
+            background-color: $color-nav-foot;
+            display: flex;
+            height: 75px;
+            gap: 500px;
+            align-items: center;
+            justify-content: center;
+        }
+
+}
+        
+
+
+
+
+
+
