@@ -217,4 +217,102 @@ main section div p.periodo, main section div p.establecimiento {
   text-align: justify;
 }
 
+@media screen and (min-width: 1024px) {
+  main {
+    margin-bottom: 10%;
+  }
+  main section {
+    display: grid;
+    width: 50%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    margin-left: 40%;
+  }
+  main h1 {
+    text-align: left;
+    margin-left: 150px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 30px;
+  margin: 50px;
+}
+main h1 {
+  margin-top: 10%;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 800%;
+  color: whitesmoke;
+  text-align: center;
+}
+main section {
+  border: 1px solid white;
+  padding: 20px;
+}
+main section div {
+  gap: 10px;
+}
+main section div div.imagen img.exp {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+main section div h3 {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 550;
+  font-style: normal;
+  font-size: 200%;
+  color: whitesmoke;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+main section div p.empresa, main section div p.descripcion {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 550;
+  font-style: normal;
+  font-size: 100%;
+  color: whitesmoke;
+  text-align: justify;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    margin-bottom: 10%;
+  }
+  main section {
+    display: grid;
+    width: 50%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    margin-left: 40%;
+  }
+  main section div div.imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
+  main section div div.imagen img.exp {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+  }
+  main section div h1 {
+    text-align: left;
+    margin-left: 150px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
