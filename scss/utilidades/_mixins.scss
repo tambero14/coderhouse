@@ -10,3 +10,19 @@
         color: $color-font;
         text-align: center;
 }
+
+        // mixing para estilos de mi foto principal en cada resolución
+
+        // para celu:
+        @mixin pic-principal-cel {
+                display: flex;
+                justify-content: center;
+                img {
+                width: 20rem;
+                height: 20rem;
+                border-style:groove;
+                border-radius: 25%;
+                border-color: whitesmoke;
+                margin-bottom: 100px;
+                }
+        }

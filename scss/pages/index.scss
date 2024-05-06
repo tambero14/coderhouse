@@ -69,13 +69,7 @@ main {
     gap: 30px;
     margin: 50px;
     div.texto h1 {
-        margin-top: 10%;
-        font-family: $titulo-main;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 800%;
-        color: $color-font;
-        text-align: center;
+        @include titulo-main;
     }
 
     div.texto h2 {
@@ -98,16 +92,7 @@ main {
     }
 
     .img {
-        display: flex;
-        justify-content: center;
-        img {
-            width: 20rem;
-            height: 20rem;
-            border-style:groove;
-            border-radius: 25%;
-            border-color: whitesmoke;
-            margin-bottom: 100px;
-        }
+        @include pic-principal-cel;
     }
 }
 
@@ -150,48 +135,70 @@ main {
             }
     }
 
-
-
-    // resolución PC desktop
-    @media screen and (min-width: 1024px) {
+    // resolución tablet
+    @media screen and (min-width: 800px) {
         main {
-            display: flex;
-            gap: 300px;
-            div.texto {
-                width: 800px;
-            }
-            div.texto h1, div.texto h2, div.texto p {
-                text-align: left;
-                margin-left: 150px;
-            }
-            div.texto p {
-                font-family: "Libre Baskerville", serif;
-                font-weight: 400;
-                font-style: normal;
-                font-size: large;
-                text-decoration: solid;
-                text-align: justify;
-            }
-            .img {
-                align-items: center;
-                img {
-                    width: 23rem;
-                    height: 25rem;
-                    border-radius: 0%;
-                    border-style:groove;
-                    border-color: whitesmoke;
-                }
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto auto;
+        gap: 30px;
+        margin: 50px;
+        }
+    }
+
+
+// resolución PC desktop 1024px
+@media screen and (min-width: 1024px) {
+    main {
+        gap: 300px;
+        div.texto {
+            width: 800px;
+        }
+        div.texto h1, div.texto h2, div.texto p {
+            text-align: left;
+            margin-left: 150px;
+        }
+        div.texto p {
+            font-family: "Libre Baskerville", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: large;
+            text-decoration: solid;
+            text-align: justify;
+        }
+        .img {
+            align-items: center;
+            img {
+                width: 23rem;
+                height: 25rem;
+                border-radius: 0%;
+                border-style:groove;
+                border-color: whitesmoke;
             }
         }
+    }
+
+    // resolución PC desktop 1400 porque no me gustaba como quedaba después de 1024px
+    @media screen and (min-width: 1400px) {
+        main {
+            gap: 300px;
+            .container-main {
+                display: flex;
+                gap: 100px;
+            }
+            .texto h1 {
+                @include titulo-main;
+            } 
+        }    
+    }
 
         footer {
             bottom: 0;
-            position: fixed;
             width: 100%;
             background-color: $color-nav-foot;
             display: flex;
             height: 75px;
-            gap: 500px;
+            gap: 200px;
             align-items: center;
             justify-content: center;
         }

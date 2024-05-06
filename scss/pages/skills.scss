@@ -34,7 +34,7 @@ main {
                 border: 1.5px;
                 border-color: aliceblue;
                 p.lang {
-                    font-family: $subtitulo;
+                    font-family: $parrafo;
                     font-weight: 550;
                     font-style:normal;
                     font-size: 200%;
@@ -55,13 +55,19 @@ main {
 @media screen and (min-width: 1024px) {
     main {
         margin-bottom: 10%;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto auto;
+        gap: 30px;
         section {
             display: grid;
-            width: 30%;
-            grid-template-columns: 3fr;
+            grid-template-columns: 1fr;
             grid-template-rows: auto auto;
-            gap: 30px;
-            margin-left: 40%;
+            gap: 30px;  
+        }
+        .container {
+            /* Asegúrate de que el contenedor tenga suficiente espacio para el texto */
+            width: 100%;
         }
         h1 { 
             text-align: left;
