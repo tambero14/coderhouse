@@ -17,6 +17,7 @@ header {
     justify-content: space-between;
     padding: 20px 100px;
     align-items: center;
+    height: 80px;
 
     // estilos de la imágen de logo para el <nav>
     img {
@@ -36,10 +37,9 @@ header {
             font-family: "Lexend Deca", sans-serif;
             color: $color-font;
             font-weight: 500;
-            font-size: large;
+            font-size: medium;
             text-decoration: none;
         }
-
     }
 
     nav.navbar div.container-fluid div.collapse ul.navbar-nav li.nav-item a.nav-link:hover, li.nav-link a:active {
@@ -77,7 +77,7 @@ main {
         font-weight: 550;
         font-style:normal;
         font-size: 200%;
-        color: $color-font;
+        color: $color-font-copete;
         text-align: center;
         margin-bottom: 75px;
     }
@@ -148,7 +148,13 @@ main {
 
 
 // resolución PC desktop 1024px
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {       
+    // animación para los componentes del <nav>
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+        color: #ff5277 !important;
+        font-size: 1.3rem;
+    }
     main {
         gap: 300px;
         div.texto {
@@ -179,9 +185,12 @@ main {
     }
 
     // resolución PC desktop 1400 porque no me gustaba como quedaba después de 1024px
-    @media screen and (min-width: 1400px) {
+    @media screen and (min-width: 1400px) {        
         main {
             gap: 300px;
+            img {
+                align-items: center;
+            }
             .container-main {
                 display: flex;
                 gap: 100px;

@@ -17,6 +17,11 @@ main {
         h1 {
             @include titulo-main;
         }
+    section.form {
+        label {
+            font-family: $parrafo;
+        }
+    }
     section.datos {
         gap: 30px;
         .mail {

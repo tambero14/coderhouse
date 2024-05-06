@@ -15,6 +15,7 @@ header {
   justify-content: space-between;
   padding: 20px 100px;
   align-items: center;
+  height: 80px;
 }
 header img {
   width: 60px;
@@ -32,7 +33,7 @@ header nav ul li a:link, header nav ul li a:visited {
   font-family: "Lexend Deca", sans-serif;
   color: whitesmoke;
   font-weight: 500;
-  font-size: large;
+  font-size: medium;
   text-decoration: none;
 }
 header nav.navbar div.container-fluid div.collapse ul.navbar-nav li.nav-item a.nav-link:hover, header li.nav-link a:active {
@@ -72,7 +73,7 @@ main div.texto h2 {
   font-weight: 550;
   font-style: normal;
   font-size: 200%;
-  color: whitesmoke;
+  color: #ff5277;
   text-align: center;
   margin-bottom: 75px;
 }
@@ -139,6 +140,11 @@ footer nav ul li a img {
   }
 }
 @media screen and (min-width: 1024px) {
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    color: #ff5277 !important;
+    font-size: 1.3rem;
+  }
   main {
     gap: 300px;
   }
@@ -171,6 +177,9 @@ footer nav ul li a img {
 @media screen and (min-width: 1024px) and (min-width: 1400px) {
   main {
     gap: 300px;
+  }
+  main img {
+    align-items: center;
   }
   main .container-main {
     display: flex;
@@ -232,7 +241,7 @@ main section div h3 {
   font-weight: 550;
   font-style: normal;
   font-size: 200%;
-  color: whitesmoke;
+  color: #ff5277 !important;
   text-align: justify;
   margin-bottom: 20px;
 }
@@ -395,6 +404,9 @@ main section .container p.separador {
   text-align: center;
   margin-top: 20px;
 }
+main section .container .progress-bar {
+  background-color: #ff5277;
+}
 
 @media screen and (min-width: 1024px) {
   main {
@@ -440,6 +452,9 @@ main h1 {
   font-size: 800%;
   color: whitesmoke;
   text-align: center;
+}
+main section.form label {
+  font-family: "Libre Baskerville", serif;
 }
 main section.datos {
   gap: 30px;
