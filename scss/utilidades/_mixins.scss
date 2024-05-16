@@ -2,11 +2,11 @@
 
 // mixing para título principal de cada HTML
 @mixin titulo-main {
-        margin-top: 10%;
+        margin-top: 10px;
         font-family: $titulo-main;
         font-weight: 400;
         font-style: normal;
-        font-size: 800%;
+        font-size: 650%;
         color: $color-font;
         text-align: center;
 }

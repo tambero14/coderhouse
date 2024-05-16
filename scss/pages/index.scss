@@ -61,7 +61,7 @@ button.navbar-toggler {
 }
 
 
-// Estilos de main
+// estilos de main
 main {
     display: grid;
     grid-template-columns: 1fr ;
@@ -155,6 +155,8 @@ main {
         color: #ff5277 !important;
         font-size: 1.3rem;
     }
+
+    // estilos de main
     main {
         gap: 300px;
         div.texto {
@@ -173,10 +175,10 @@ main {
             text-align: justify;
         }
         .img {
-            align-items: center;
             img {
-                width: 23rem;
-                height: 25rem;
+                width: 100%;
+                height: 50%;
+                object-fit: cover;
                 border-radius: 0%;
                 border-style:groove;
                 border-color: whitesmoke;
@@ -188,8 +190,13 @@ main {
     @media screen and (min-width: 1400px) {        
         main {
             gap: 300px;
-            img {
-                align-items: center;
+            div img {
+                width: 100%;
+                height: 50%;
+                object-fit: cover;
+                border-radius: 0%;
+                border-style:groove;
+                border-color: whitesmoke;
             }
             .container-main {
                 display: flex;

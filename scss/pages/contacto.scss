@@ -22,6 +22,12 @@ main {
             font-family: $parrafo;
         }
     }
+
+    p.nota {
+        font-family: $parrafo;
+        color: $color-font;
+    }
+
     section.datos {
         gap: 30px;
         .mail {
@@ -47,9 +53,9 @@ main {
         }
     }
 
-        .icono img, section.datos .cel img, section.datos .ubi img, {
+        .icono img, section.datos .cel img, section.datos .ubi img {
             width: 25px;
-    }
+    }   
 }
 
 
