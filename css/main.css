@@ -140,10 +140,19 @@ footer nav ul li a img {
   }
 }
 @media screen and (min-width: 1024px) {
+  /* animación para los componentes del <nav> */
+  .navbar-nav .nav-link {
+    color: whitesmoke;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 500;
+    font-size: medium;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s; /* transición para suavizar el cambio de color y tamaño */
+  }
   .navbar-nav .nav-link:hover,
   .navbar-nav .nav-link:focus {
     color: #ff5277 !important;
-    font-size: 1.3rem;
+    transform: scale(1.1); /* escala el elemento en lugar de cambiar su tamaño */
   }
   main {
     gap: 300px;
@@ -239,11 +248,11 @@ main section {
 main section div {
   gap: 10px;
 }
-main section div h3 {
+main section.educacion div.referencia h3 {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 550;
   font-style: normal;
-  font-size: 200%;
+  font-size: 130%;
   color: #ff5277 !important;
   text-align: justify;
   margin-bottom: 20px;
@@ -252,7 +261,7 @@ main section div p.periodo, main section div p.establecimiento {
   font-family: "Libre Baskerville", serif;
   font-weight: 550;
   font-style: normal;
-  font-size: 100%;
+  font-size: 80%;
   color: whitesmoke;
   text-align: justify;
 }
@@ -262,18 +271,26 @@ main section div p.periodo, main section div p.establecimiento {
     margin-bottom: 10%;
   }
   main.contenedor section.educacion {
-    display: grid;
-    grid-template-columns: auto 2fr;
-    grid-template-rows: auto;
-    gap: 200px;
     border: 0;
-    margin-left: 150px;
+    margin-left: 100px;
+  }
+  main.contenedor section.educacion div.tarjeta {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+  main.contenedor section.educacion div.tarjeta {
+    background-color: #0E141B;
+    padding: 20px;
+    border-radius: 10px;
   }
   main.contenedor section.educacion div .ano {
     grid-column: 1;
   }
-  main.contenedor section.educacion div .card {
+  main.contenedor section.educacion div .referencia {
     grid-column: 2;
+    background-color: #0E141B;
   }
   main.contenedor h1 {
     text-align: left;
