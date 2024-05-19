@@ -269,10 +269,13 @@ main section div p.periodo, main section div p.establecimiento {
 @media screen and (min-width: 1024px) {
   main.contenedor {
     margin-bottom: 10%;
+    justify-content: center;
   }
   main.contenedor section.educacion {
     border: 0;
     margin-left: 100px;
+    padding: 10px;
+    max-width: 500px;
   }
   main.contenedor section.educacion div.tarjeta {
     display: grid;
@@ -303,14 +306,14 @@ main section div p.periodo, main section div p.establecimiento {
   box-sizing: border-box;
 }
 
-main {
+main.experiencia {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   gap: 30px;
   margin: 50px;
 }
-main h1 {
+main.experiencia h1 {
   margin-top: 10px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -319,28 +322,28 @@ main h1 {
   color: whitesmoke;
   text-align: center;
 }
-main section {
+main.experiencia section {
   border: 1px solid white;
   padding: 20px;
 }
-main section div {
+main.experiencia section div {
   gap: 10px;
 }
-main section div div.imagen img.exp {
+main.experiencia section div div.imagen img.exp {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
 }
-main section div h3 {
+main.experiencia section div h3 {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 550;
   font-style: normal;
-  font-size: 200%;
-  color: whitesmoke;
+  font-size: 130%;
+  color: #ff5277 !important;
   text-align: justify;
   margin-bottom: 20px;
 }
-main section div p.empresa, main section div p.descripcion {
+main.experiencia section div p.empresa, main.experiencia section div p.descripcion {
   font-family: "Libre Baskerville", serif;
   font-weight: 550;
   font-style: normal;
@@ -350,31 +353,46 @@ main section div p.empresa, main section div p.descripcion {
 }
 
 @media screen and (min-width: 1024px) {
-  main {
+  main.experiencia {
     margin-bottom: 10%;
   }
-  main section {
-    display: grid;
-    width: 50%;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    gap: 30px;
-    margin-left: 40%;
-  }
-  main section div div.imagen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-  }
-  main section div div.imagen img.exp {
-    width: 100%;
-    height: auto;
-    max-width: 150px;
-  }
-  main section div h1 {
+  main.experiencia h1 {
     text-align: left;
     margin-left: 150px;
+  }
+  main.experiencia div.contenido-centrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+  }
+  main.experiencia div.contenido-centrado section.experiencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border: 0;
+    margin-bottom: 20px; /* Espacio entre secciones */
+  }
+  main.experiencia div.contenido-centrado section.experiencia div.tarjeta {
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos al inicio (parte superior) */
+    background-color: #0E141B;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 50px; /* Espacio entre la imagen y el contenido */
+    width: 100%; /* Asegura que la tarjeta ocupe el 100% del contenedor */
+  }
+  main.experiencia div.contenido-centrado section.experiencia div.tarjeta div.imagen {
+    width: 100%;
+    height: auto;
+    max-width: 100px; /* Ajusta el tamaño máximo de las imágenes */
+    object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
+  }
+  main.experiencia div.contenido-centrado section.experiencia div.content {
+    flex: 1; /* Permite que el contenido ocupe el espacio restante */
+  }
+  main.experiencia div.contenido-centrado section.experiencia div.imagen img.exp {
+    border: 0;
   }
 }
 * {

@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-main {
+main.experiencia {
     display: grid;
     grid-template-columns: 1fr ;
     grid-template-rows: auto auto;
@@ -28,9 +28,9 @@ main {
         section div h3 {
             font-family: $subtitulo;
             font-weight: 550;
-            font-style:normal;
-            font-size: 200%;
-            color: $color-font;
+            font-style: normal;
+            font-size: 130%;
+            color: $color-font-copete !important;
             text-align: justify;
             margin-bottom: 20px;
         }
@@ -46,31 +46,52 @@ main {
 
  // resolución PC desktop
  @media screen and (min-width: 1024px) {
-    main {
+    main.experiencia {
         margin-bottom: 10%;
-        section {
-            display: grid;
-            width: 50%;
-            grid-template-columns: 1fr ;
-            grid-template-rows: auto auto;
-            gap: 30px;
-            margin-left: 40%;
-            div {
-                div.imagen {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    max-width: 100%;
-             }
-            div.imagen img.exp  {
-                width: 100%; 
-                height: auto; 
-                max-width: 150px;
-        }
         h1 { 
             text-align: left;
             margin-left: 150px;
         }
+        div.contenido-centrado {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra el contenido horizontalmente */
+                section.experiencia {
+                // display: flex;
+                // width: 50%;
+                // border: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                border: 0;
+                margin-bottom: 20px; /* Espacio entre secciones */                 
+                    div.tarjeta {
+                        display: flex;
+                        align-items: flex-start; /* Alinea los elementos al inicio (parte superior) */
+                        background-color: $color-nav-foot;
+                        padding: 20px;
+                        border-radius: 10px;
+                        gap: 50px; /* Espacio entre la imagen y el contenido */
+                        width: 100%; /* Asegura que la tarjeta ocupe el 100% del contenedor */
+                        div.imagen {
+                            // display: flex;
+                            // justify-content: center;
+                            // align-items: center;
+                            // max-width: 100%;
+                            width: 100%;
+                            height: auto;
+                            max-width: 100px; /* Ajusta el tamaño máximo de las imágenes */
+                            object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
+                    }
+                }
+                div.content {
+                    flex: 1; /* Permite que el contenido ocupe el espacio restante */
+                }
+                div.imagen img.exp  {
+                 border: 0;
+                }
+
     }
  }
 }
