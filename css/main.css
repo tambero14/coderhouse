@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/* mixing para el footer */
+/* celular */
+/* desktop */
+/* para celu: */
+/* este mixing es para lograr el efecto de tarjeta con fondo azul, para que sobresalte cada elemento, en el HTML "04 skills" */
 * {
   margin: 0;
   padding: 0;
@@ -147,12 +152,12 @@ footer nav ul li a img {
     font-weight: 500;
     font-size: medium;
     text-decoration: none;
-    transition: color 0.3s, transform 0.3s; /* transición para suavizar el cambio de color y tamaño */
+    transition: color 0.3s, transform 0.3s;
   }
   .navbar-nav .nav-link:hover,
   .navbar-nav .nav-link:focus {
     color: #ff5277 !important;
-    transform: scale(1.1); /* escala el elemento en lugar de cambiar su tamaño */
+    transform: scale(1.1);
   }
   main {
     gap: 300px;
@@ -219,6 +224,11 @@ footer nav ul li a img {
     justify-content: center;
   }
 }
+/* mixing para el footer */
+/* celular */
+/* desktop */
+/* para celu: */
+/* este mixing es para lograr el efecto de tarjeta con fondo azul, para que sobresalte cada elemento, en el HTML "04 skills" */
 * {
   margin: 0;
   padding: 0;
@@ -363,7 +373,7 @@ main.experiencia section div p.empresa, main.experiencia section div p.descripci
   main.experiencia div.contenido-centrado {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
+    align-items: center;
   }
   main.experiencia div.contenido-centrado section.experiencia {
     display: flex;
@@ -371,44 +381,49 @@ main.experiencia section div p.empresa, main.experiencia section div p.descripci
     align-items: center;
     width: 50%;
     border: 0;
-    margin-bottom: 20px; /* Espacio entre secciones */
+    margin-bottom: 20px;
   }
   main.experiencia div.contenido-centrado section.experiencia div.tarjeta {
     display: flex;
-    align-items: flex-start; /* Alinea los elementos al inicio (parte superior) */
+    align-items: flex-start;
     background-color: #0E141B;
     padding: 20px;
     border-radius: 10px;
-    gap: 50px; /* Espacio entre la imagen y el contenido */
-    width: 100%; /* Asegura que la tarjeta ocupe el 100% del contenedor */
+    gap: 50px;
+    width: 100%;
   }
   main.experiencia div.contenido-centrado section.experiencia div.tarjeta div.imagen {
     width: 100%;
     height: auto;
-    max-width: 100px; /* Ajusta el tamaño máximo de las imágenes */
-    object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
+    max-width: 100px;
+    object-fit: contain;
   }
   main.experiencia div.contenido-centrado section.experiencia div.content {
-    flex: 1; /* Permite que el contenido ocupe el espacio restante */
+    flex: 1;
   }
   main.experiencia div.contenido-centrado section.experiencia div.imagen img.exp {
     border: 0;
   }
 }
+/* mixing para el footer */
+/* celular */
+/* desktop */
+/* para celu: */
+/* este mixing es para lograr el efecto de tarjeta con fondo azul, para que sobresalte cada elemento, en el HTML "04 skills" */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-main {
+main.skills {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   gap: 30px;
   margin: 50px;
 }
-main h1 {
+main.skills h1 {
   margin-top: 10px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -417,78 +432,127 @@ main h1 {
   color: whitesmoke;
   text-align: center;
 }
-main section {
+main.skills section {
   border: 1px solid white;
   padding: 20px;
 }
-main section h2 {
+main.skills section h2 {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 550;
   font-style: normal;
-  font-size: 200%;
-  color: whitesmoke;
+  font-size: 130%;
+  color: #ff5277 !important;
   text-align: center;
   margin-bottom: 20px;
 }
-main section .container {
+main.skills section .container {
   border: 1.5px;
   border-color: aliceblue;
 }
-main section .container p.lang {
+main.skills section .container p.lang {
   font-family: "Libre Baskerville", serif;
   font-weight: 550;
   font-style: normal;
-  font-size: 200%;
+  font-size: 100%;
   color: whitesmoke;
   text-align: justify;
   margin-bottom: 20px;
 }
-main section .container p.separador {
+main.skills section .container p.separador {
   color: whitesmoke;
   text-align: center;
   margin-top: 20px;
 }
-main section .container .progress-bar {
+main.skills section .container .progress-bar {
   background-color: #ff5277;
 }
 
 @media screen and (min-width: 1024px) {
-  main {
+  main.skills {
     margin-bottom: 10%;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 3fr;
+    grid-template-rows: 2fr;
     gap: 30px;
   }
-  main section {
+  main.skills div.megacontenedor {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr;
   }
-  main .container {
-    /* Asegúrate de que el contenedor tenga suficiente espacio para el texto */
+  main.skills div.megacontenedor section.idiomas {
+    grid-column: 1;
+    grid-row: 1;
+    border: 0;
+  }
+  main.skills div.megacontenedor section.idiomas div.skill-card {
+    background-color: #0E141B;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 50px;
     width: 100%;
   }
-  main h1 {
+  main.skills div.megacontenedor section.programacion {
+    grid-column: 2;
+    grid-row: 1;
+    border: 0;
+    grid-row: span 2;
+  }
+  main.skills div.megacontenedor section.programacion div.skill-card {
+    background-color: #0E141B;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 50px;
+    width: 100%;
+  }
+  main.skills div.megacontenedor section.diseño {
+    grid-column: 3;
+    grid-row: 1;
+    border: 0;
+  }
+  main.skills div.megacontenedor section.diseño div.skill-card {
+    background-color: #0E141B;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 50px;
+    width: 100%;
+  }
+  main.skills div.megacontenedor section.loc {
+    grid-column: 1;
+    grid-row: 2;
+    border: 0;
+  }
+  main.skills div.megacontenedor section.loc div.skill-card {
+    background-color: #0E141B;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 50px;
+    width: 100%;
+  }
+  main.skills h1 {
     text-align: left;
     margin-left: 150px;
   }
 }
+/* mixing para el footer */
+/* celular */
+/* desktop */
+/* para celu: */
+/* este mixing es para lograr el efecto de tarjeta con fondo azul, para que sobresalte cada elemento, en el HTML "04 skills" */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-main {
+main.contacto {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   gap: 30px;
   margin: 50px;
 }
-main h1 {
+main.contacto h1 {
   margin-top: 10px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -497,53 +561,80 @@ main h1 {
   color: whitesmoke;
   text-align: center;
 }
-main section.form label {
+main.contacto section.form label {
   font-family: "Libre Baskerville", serif;
 }
-main p.nota {
+main.contacto p.nota {
   font-family: "Libre Baskerville", serif;
   color: whitesmoke;
 }
-main section.datos {
+main.contacto section.datos {
   gap: 30px;
 }
-main section.datos .mail {
+main.contacto section.datos .mail {
   display: flex;
   gap: 30px;
   margin-bottom: 20px;
 }
-main section.datos .info p {
+main.contacto section.datos .info p {
   color: whitesmoke;
 }
-main section.datos .cel {
+main.contacto section.datos .cel {
   display: flex;
   gap: 30px;
   margin-bottom: 20px;
 }
-main section.datos .ubi {
+main.contacto section.datos .ubi {
   display: flex;
   gap: 30px;
 }
-main section.datos p {
+main.contacto section.datos p {
   font-family: "Libre Baskerville", serif;
 }
-main .icono img, main section.datos .cel img, main section.datos .ubi img {
+main.contacto .icono img, main.contacto section.datos .cel img, main.contacto section.datos .ubi img {
   width: 25px;
 }
 
 @media screen and (min-width: 1024px) {
-  main {
+  main.contacto {
     margin-bottom: 10%;
   }
-  main section.form, main section.datos {
+  main.contacto div.contacto-elementos {
+    display: flex;
+    gap: 150px;
+  }
+  main.contacto div.contacto-elementos p.nota {
+    width: 500px;
+    text-align: justify;
+  }
+  main.contacto section.form {
     display: grid;
-    width: 50%;
+    width: 30%;
     grid-template-columns: 3fr;
     grid-template-rows: auto auto;
     gap: 30px;
-    margin-left: 40%;
+    background-color: #0E141B;
+    padding: 20px;
+    border-radius: 10px;
+    border: 0;
   }
-  main h1 {
+  main.contacto section.form button.btn {
+    background-color: #ff5277;
+    border-color: #ff5277;
+    border-radius: 20%;
+  }
+  main.contacto section.datos {
+    background-color: #0E141B;
+    padding: 20px;
+    border-radius: 10px;
+    border: 0;
+    width: 30%;
+  }
+  main.contacto section.datos div.mail div.icono img, main.contacto section.datos div.cel div.cel img, main.contacto section.datos div.ubi div.ubi img {
+    border: 0;
+    object-fit: contain;
+  }
+  main.contacto h1 {
     text-align: left;
     margin-left: 150px;
   }

@@ -1,8 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
+@include reset;
 
 main.experiencia {
     display: grid;
@@ -55,44 +52,37 @@ main.experiencia {
         div.contenido-centrado {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Centra el contenido horizontalmente */
+            align-items: center; 
                 section.experiencia {
-                // display: flex;
-                // width: 50%;
-                // border: 0;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 50%;
-                border: 0;
-                margin-bottom: 20px; /* Espacio entre secciones */                 
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 50%;
+                    border: 0;
+                    margin-bottom: 20px;              
                     div.tarjeta {
                         display: flex;
-                        align-items: flex-start; /* Alinea los elementos al inicio (parte superior) */
+                        align-items: flex-start; 
                         background-color: $color-nav-foot;
                         padding: 20px;
                         border-radius: 10px;
-                        gap: 50px; /* Espacio entre la imagen y el contenido */
-                        width: 100%; /* Asegura que la tarjeta ocupe el 100% del contenedor */
+                        gap: 50px; 
+                        width: 100%; 
                         div.imagen {
-                            // display: flex;
-                            // justify-content: center;
-                            // align-items: center;
-                            // max-width: 100%;
                             width: 100%;
                             height: auto;
-                            max-width: 100px; /* Ajusta el tamaño máximo de las imágenes */
-                            object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
+                            max-width: 100px; 
+                            object-fit: contain; 
+                        }      
                     }
-                }
                 div.content {
-                    flex: 1; /* Permite que el contenido ocupe el espacio restante */
+                    flex: 1; 
                 }
                 div.imagen img.exp  {
                  border: 0;
                 }
 
+            }
+        }
     }
- }
-}
 }

@@ -1,4 +1,13 @@
 
+// reset para cada HTML
+@mixin reset {
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+}
+
 
 // mixing para título principal de cada HTML
 @mixin titulo-main {
@@ -11,18 +20,53 @@
         text-align: center;
 }
 
-        // mixing para estilos de mi foto principal en cada resolución
+/* mixing para el footer */
+/* celular */
+@mixin footer_celu {
+        background-color: $color-nav-foot;
+        display: flex;
+        height: 100px;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+}
 
-        // para celu:
-        @mixin pic-principal-cel {
-                display: flex;
-                justify-content: center;
-                img {
-                width: 20rem;
-                height: 20rem;
-                border-style:groove;
-                border-radius: 25%;
-                border-color: whitesmoke;
-                margin-bottom: 100px;
-                }
+/* desktop */
+@mixin footer_desktop {
+        bottom: 0;
+        width: 100%;
+        background-color: $color-nav-foot;
+        display: flex;
+        height: 75px;
+        gap: 200px;
+        align-items: center;
+        justify-content: center;
+}
+
+
+/* para celu: */
+@mixin pic-principal-cel {
+        display: flex;
+        justify-content: center;
+        img {
+        width: 20rem;
+        height: 20rem;
+        border-style:groove;
+        border-radius: 25%;
+        border-color: whitesmoke;
+        margin-bottom: 100px;
         }
+}
+
+/* este mixing es para lograr el efecto de tarjeta con fondo azul, para que sobresalte cada elemento, en el HTML "04 skills" */
+
+@mixin card-azul {
+        div.skill-card {
+                background-color: $color-nav-foot;
+                padding: 20px;
+                border-radius: 10px;
+                gap: 50px; 
+                width: 100%;
+        }
+}
+

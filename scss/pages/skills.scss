@@ -2,13 +2,9 @@
 @import "../utilidades/mixins";
 
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@include reset;
 
-main {
+main.skills {
     display: grid;
     grid-template-columns: 1fr ;
     grid-template-rows: auto auto;
@@ -23,9 +19,9 @@ main {
             h2 {
                 font-family: $subtitulo;
                 font-weight: 550;
-                font-style:normal;
-                font-size: 200%;
-                color: $color-font;
+                font-style: normal;
+                font-size: 130%;
+                color: $color-font-copete !important;
                 text-align: center;
                 margin-bottom: 20px;
             }
@@ -37,7 +33,7 @@ main {
                     font-family: $parrafo;
                     font-weight: 550;
                     font-style:normal;
-                    font-size: 200%;
+                    font-size: 100%;
                     color: $color-font;
                     text-align: justify;
                     margin-bottom: 20px;  
@@ -56,21 +52,41 @@ main {
 
 // resolución PC desktop
 @media screen and (min-width: 1024px) {
-    main {
+    main.skills {   
         margin-bottom: 10%;
         display: grid;
-        grid-template-columns: 1fr ;
-        grid-template-rows: auto auto;
+        grid-template-columns: 3fr ;
+        grid-template-rows: 2fr;
         gap: 30px;
-        section {
+        div.megacontenedor {
             display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto;
-            gap: 30px;  
-        }
-        .container {
-            /* Asegúrate de que el contenedor tenga suficiente espacio para el texto */
-            width: 100%;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 2fr;
+            section.idiomas {
+                grid-column: 1;
+                grid-row: 1;
+                border: 0;
+                @include card-azul;
+            }
+            section.programacion {
+                grid-column: 2;
+                grid-row: 1;
+                border: 0;
+                grid-row: span 2;
+                @include card-azul;
+            }
+            section.diseño {
+                grid-column: 3;
+                grid-row: 1;
+                border: 0;
+                @include card-azul;
+            }
+            section.loc {
+                grid-column: 1;
+                grid-row: 2;
+                border: 0;
+                @include card-azul;
+            }
         }
         h1 { 
             text-align: left;

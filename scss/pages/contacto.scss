@@ -2,13 +2,9 @@
 @import "../utilidades/mixins";
 
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@include reset;
 
-main {
+main.contacto {
     display: grid;
     grid-template-columns: 1fr ;
     grid-template-rows: auto auto;
@@ -55,21 +51,48 @@ main {
 
         .icono img, section.datos .cel img, section.datos .ubi img {
             width: 25px;
-    }   
+        }   
 }
 
 
 // resolución PC desktop (para tablet queda responsive también!)
 @media screen and (min-width: 1024px) {
-    main {
+    main.contacto {
         margin-bottom: 10%;
-        section.form, section.datos {
+        div.contacto-elementos {
+            display: flex;
+            gap: 150px;
+            p.nota {
+                width: 500px;
+                text-align: justify;
+            }
+        }
+        section.form  {
             display: grid;
-            width: 50%;
+            width: 30%;
             grid-template-columns: 3fr;
             grid-template-rows: auto auto;
             gap: 30px;
-            margin-left: 40%;
+            background-color: $color-nav-foot;
+            padding: 20px;
+            border-radius: 10px;
+            border: 0;
+            button.btn {
+                background-color: $color-font-copete;
+                border-color: $color-font-copete;
+                border-radius: 20%;
+            }
+        }
+        section.datos {
+            background-color: $color-nav-foot;
+            padding: 20px;
+            border-radius: 10px;
+            border: 0;
+            width: 30%;
+            div.mail div.icono img, div.cel div.cel img, div.ubi div.ubi img {
+                border: 0;
+                object-fit: contain;
+            } 
         }
         h1 { 
             text-align: left;
