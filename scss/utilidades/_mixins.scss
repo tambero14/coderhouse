@@ -9,6 +9,19 @@
 }
 
 
+/* mixing para estilo de header */
+@mixin header {
+        header {
+        background-color: $color-nav-foot;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 100px;
+        align-items: center;
+        height: 80px;
+        }
+}
+
+
 // mixing para título principal de cada HTML
 @mixin titulo-main {
         margin-top: 10px;

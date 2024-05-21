@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* mixing para estilo de header */
 /* mixing para el footer */
 /* celular */
 /* desktop */
@@ -69,6 +70,10 @@ button.navbar-toggler {
     z-index: 1050;
     overflow-y: auto;
     display: none;
+  }
+  .navbar-collapse .navbar-nav .nav-link.active {
+    color: #ff5277 !important;
+    font-size: 25px;
   }
   .navbar-collapse.show {
     display: block;
@@ -182,12 +187,21 @@ footer nav ul li a img {
   header a img:hover {
     transform: scale(1.1);
   }
+  /* vuelvo a importar los estilos del header con un mixing */
+  header {
+    background-color: #0E141B;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+    align-items: center;
+    height: 80px;
+  }
   /* animación para los componentes del <nav> */
   .navbar-nav .nav-link {
     color: whitesmoke;
     font-family: "Lexend Deca", sans-serif;
     font-weight: 500;
-    font-size: 10pt;
+    font-size: 12pt;
     text-decoration: none;
     transition: color 0.3s, transform 0.3s;
   }
@@ -261,6 +275,7 @@ footer nav ul li a img {
     justify-content: center;
   }
 }
+/* mixing para estilo de header */
 /* mixing para el footer */
 /* celular */
 /* desktop */
@@ -314,9 +329,22 @@ main section div p.periodo, main section div p.establecimiento {
 }
 
 @media screen and (min-width: 1024px) {
+  header {
+    background-color: #0E141B;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+    align-items: center;
+    height: 80px;
+  }
   main.contenedor {
     margin-bottom: 10%;
     justify-content: center;
+  }
+  main.contenedor div.container-edu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   main.contenedor section.educacion {
     border: 0;
@@ -442,6 +470,7 @@ main.experiencia section div p.empresa, main.experiencia section div p.descripci
     border: 0;
   }
 }
+/* mixing para estilo de header */
 /* mixing para el footer */
 /* celular */
 /* desktop */
@@ -571,6 +600,7 @@ main.skills section .container .progress-bar {
     margin-left: 150px;
   }
 }
+/* mixing para estilo de header */
 /* mixing para el footer */
 /* celular */
 /* desktop */
@@ -597,6 +627,11 @@ main.contacto h1 {
   font-size: 650%;
   color: whitesmoke;
   text-align: center;
+}
+main.contacto section.form button.btn {
+  background-color: #ff5277;
+  border-color: #ff5277;
+  border-radius: 20%;
 }
 main.contacto section.form label {
   font-family: "Libre Baskerville", serif;

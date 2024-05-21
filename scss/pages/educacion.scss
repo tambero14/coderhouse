@@ -41,9 +41,15 @@ main {
 
  // resolución PC desktop
  @media screen and (min-width: 1024px) {
+    @include header;
     main.contenedor {
         margin-bottom: 10%;
         justify-content: center;
+        div.container-edu {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
         section.educacion    {
             border: 0;
             margin-left: 100px;
@@ -69,7 +75,6 @@ main {
             }
 
         }
-
         h1 { 
             text-align: left;
             margin-left: 150px;

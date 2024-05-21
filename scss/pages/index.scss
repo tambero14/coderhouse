@@ -58,7 +58,7 @@ header {
      background-color: whitesmoke !important;
     }
     
-    /* código para arreglar el menú hamburguesa que no me funciona cuando lo despliego para celular */
+/* código para arreglar el menú hamburguesa que no me funciona cuando lo despliego para celular */
     @media screen and (max-width: 550px) {
         .navbar-collapse {
             position: fixed;
@@ -70,8 +70,11 @@ header {
             z-index: 1050;
             overflow-y: auto;
             display: none;
+            .navbar-nav .nav-link.active {
+                color: $color-font-copete !important;
+                font-size: 25px;
+               }
         }
-
         .navbar-collapse.show {
             display: block;
         }
@@ -185,13 +188,15 @@ main {
         transform: scale(1.1);
     }
 
+    /* vuelvo a importar los estilos del header con un mixing */
+    @include header;
 
     /* animación para los componentes del <nav> */
     .navbar-nav .nav-link {
         color: $color-font;
         font-family: "Lexend Deca", sans-serif;
         font-weight: 500;
-        font-size: 10pt;
+        font-size: 12pt;
         text-decoration: none;
         transition: color 0.3s, transform 0.3s; 
     }
