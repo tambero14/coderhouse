@@ -4,80 +4,102 @@
 
 @include reset;
 
-main {
+main.contenedor {
     display: grid;
     grid-template-columns: 1fr ;
     grid-template-rows: auto auto;
     gap: 30px;
     margin: 50px;
-        h1 {
-            @include titulo-main;
-        }
-        section {
-            border: 1px solid white;
-            padding: 20px;
-            div {
-                gap: 10px;
-            }
-        }
-        section.educacion div.referencia h3 {
-            font-family: $subtitulo;
-            font-weight: 550;
-            font-style: normal;
-            font-size: 130%;
-            color: $color-font-copete !important;
-            text-align: justify;
-            margin-bottom: 20px;
-        }
-        section div p.periodo, section div p.establecimiento {
-            font-family: $parrafo;
-            font-weight: 550;
-            font-style:normal;
-            font-size: 80%;
-            color: $color-font;
-            text-align: justify;
-        }
-}
-
- // resolución PC desktop
- @media screen and (min-width: 1024px) {
-    @include header;
-    main.contenedor {
-        margin-bottom: 10%;
-        justify-content: center;
-        div.container-edu {
+    h1 {
+        @include titulo-main;
+    }
+    div.container-edu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        section.educacion {
             display: flex;
             flex-direction: column;
-            align-items: center; 
-        }
-        section.educacion    {
-            border: 0;
-            margin-left: 100px;
-            padding: 10px;
-            max-width: 500px;
+            align-items: center;
+            margin-bottom: 50px; 
             div.tarjeta {
                 display: grid;
                 grid-template-columns: 1fr 3fr;
                 grid-template-rows: auto;
-                gap: 10px;
-            }
-            div.tarjeta {
+                gap: 40px;
                 background-color: $color-nav-foot;
                 padding: 20px;
-                border-radius: 10px;
+                border-radius: 30px;
+                div.ano {
+                    p.periodo {
+                    font-family: $parrafo;
+                    font-weight: 550;
+                    font-style:normal;
+                    font-size: 80%;
+                    color: $color-font;
+                    text-align: justify;
+                    }
+                }
+                div.referencia {
+                    h3 {
+                    font-family: $subtitulo;
+                    font-weight: 550;
+                    font-style: normal;
+                    font-size: 130%;
+                    color: $color-font-copete !important;
+                    text-align: justify;
+                    margin-bottom: 20px;
+                    }
+                    p.establecimiento {
+                        font-family: $subtitulo;
+                        font-weight: 550;
+                        font-style: normal;
+                        font-size: 90%;
+                        color: $color-font !important;
+                        text-align: justify;
+                        margin-bottom: 20px;
+                    }
+                }
             }
-            div .ano {
-                grid-column: 1;
-            }
-            div .referencia {
-                grid-column: 2;
-                background-color: $color-nav-foot;
-            }
-
         }
+    }
+}
+
+ // resolución PC desktop
+ @media screen and (min-width: 1024px) {
+    main.contenedor {
+        margin-bottom: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         h1 { 
             text-align: left;
             margin-left: 150px;
+        }
+        div.container-edu {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            section.educacion  {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100% !important;
+                border: 0;
+                margin-bottom: 20px;   
+                div.tarjeta {
+                    display: flex;
+                    align-items: flex-start; 
+                    background-color: $color-nav-foot;
+                    padding: 20px;
+                    border-radius: 10px;
+                    gap: 50px; 
+                    width: 100%;
+                    div.ano p.periodo, div.referencia h3, div.referencia p.establecimiento {
+                        width: 100%;
+                    }
+                }        
+            }
         }
     }
  }

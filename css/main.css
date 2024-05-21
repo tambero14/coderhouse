@@ -287,14 +287,14 @@ footer nav ul li a img {
   box-sizing: border-box;
 }
 
-main {
+main.contenedor {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   gap: 30px;
   margin: 50px;
 }
-main h1 {
+main.contenedor h1 {
   margin-top: 10px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -303,14 +303,35 @@ main h1 {
   color: whitesmoke;
   text-align: center;
 }
-main section {
-  border: 1px solid white;
+main.contenedor div.container-edu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main.contenedor div.container-edu section.educacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+main.contenedor div.container-edu section.educacion div.tarjeta {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto;
+  gap: 40px;
+  background-color: #0E141B;
   padding: 20px;
+  border-radius: 30px;
 }
-main section div {
-  gap: 10px;
+main.contenedor div.container-edu section.educacion div.tarjeta div.ano p.periodo {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 550;
+  font-style: normal;
+  font-size: 80%;
+  color: whitesmoke;
+  text-align: justify;
 }
-main section.educacion div.referencia h3 {
+main.contenedor div.container-edu section.educacion div.tarjeta div.referencia h3 {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 550;
   font-style: normal;
@@ -319,60 +340,51 @@ main section.educacion div.referencia h3 {
   text-align: justify;
   margin-bottom: 20px;
 }
-main section div p.periodo, main section div p.establecimiento {
-  font-family: "Libre Baskerville", serif;
+main.contenedor div.container-edu section.educacion div.tarjeta div.referencia p.establecimiento {
+  font-family: "Lexend Deca", sans-serif;
   font-weight: 550;
   font-style: normal;
-  font-size: 80%;
-  color: whitesmoke;
+  font-size: 90%;
+  color: whitesmoke !important;
   text-align: justify;
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  header {
-    background-color: #0E141B;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 100px;
-    align-items: center;
-    height: 80px;
-  }
   main.contenedor {
     margin-bottom: 10%;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main.contenedor h1 {
+    text-align: left;
+    margin-left: 150px;
   }
   main.contenedor div.container-edu {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  main.contenedor section.educacion {
+  main.contenedor div.container-edu section.educacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100% !important;
     border: 0;
-    margin-left: 100px;
-    padding: 10px;
-    max-width: 500px;
+    margin-bottom: 20px;
   }
-  main.contenedor section.educacion div.tarjeta {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto;
-    gap: 10px;
-  }
-  main.contenedor section.educacion div.tarjeta {
+  main.contenedor div.container-edu section.educacion div.tarjeta {
+    display: flex;
+    align-items: flex-start;
     background-color: #0E141B;
     padding: 20px;
     border-radius: 10px;
+    gap: 50px;
+    width: 100%;
   }
-  main.contenedor section.educacion div .ano {
-    grid-column: 1;
-  }
-  main.contenedor section.educacion div .referencia {
-    grid-column: 2;
-    background-color: #0E141B;
-  }
-  main.contenedor h1 {
-    text-align: left;
-    margin-left: 150px;
+  main.contenedor div.container-edu section.educacion div.tarjeta div.ano p.periodo, main.contenedor div.container-edu section.educacion div.tarjeta div.referencia h3, main.contenedor div.container-edu section.educacion div.tarjeta div.referencia p.establecimiento {
+    width: 100%;
   }
 }
 * {
