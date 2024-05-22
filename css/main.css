@@ -582,8 +582,8 @@ main.skills div.megacontenedor section.idiomas div.skill-card div.container p.se
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
-    gap: 50px;
-    margin-top: 0%;
+    gap: 40px;
+    align-items: normal;
   }
   main.skills div.megacontenedor section.idiomas div.skill-card, main.skills div.megacontenedor section.programacion div.skill-card, main.skills div.megacontenedor section.diseño div.skill-card, main.skills div.megacontenedor section.loc div.skill-card {
     background-color: #0E141B;
@@ -623,6 +623,7 @@ main.skills div.megacontenedor section.idiomas div.skill-card div.container p.se
     color: whitesmoke;
     text-align: center;
     margin-top: 20px;
+    display: none;
   }
   main.skills div.megacontenedor section.idiomas {
     grid-column: 2;

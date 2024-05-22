@@ -76,8 +76,8 @@ main.skills {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: auto auto;
-            gap: 50px;
-            margin-top: 0%;
+            gap: 40px;
+            align-items: normal;
             section.idiomas, section.programacion, section.diseño, section.loc {
                 @include card-azul;        
                 div.skill-card {
@@ -111,6 +111,7 @@ main.skills {
                         color: $color-font;
                         text-align: center;
                         margin-top: 20px;  
+                        display: none;
                         }
                     }
                 }
@@ -118,6 +119,7 @@ main.skills {
             section.idiomas {
                 grid-column: 2;
                 grid-row: 1;
+
             }
             section.programacion {
                 grid-column: 1;
