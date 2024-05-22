@@ -730,6 +730,7 @@ main.contacto div.contacto-elementos .icono img, main.contacto div.contacto-elem
   main.contacto div.contacto-elementos {
     display: flex;
     gap: 150px;
+    background-color: #23272A;
   }
   main.contacto div.contacto-elementos p.nota {
     width: 500px;

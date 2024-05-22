@@ -71,6 +71,7 @@ main.contacto {
         div.contacto-elementos {
             display: flex;
             gap: 150px;
+            background-color: $color-main;
             p.nota {
                 width: 500px;
                 text-align: justify;
