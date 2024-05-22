@@ -523,11 +523,27 @@ main.skills h1 {
   color: whitesmoke;
   text-align: center;
 }
-main.skills section {
-  border: 1px solid white;
-  padding: 20px;
+main.skills div.megacontenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-main.skills section h2 {
+main.skills div.megacontenedor section.idiomas, main.skills div.megacontenedor section.programacion, main.skills div.megacontenedor section.diseño, main.skills div.megacontenedor section.loc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+main.skills div.megacontenedor section.idiomas div.skill-card, main.skills div.megacontenedor section.programacion div.skill-card, main.skills div.megacontenedor section.diseño div.skill-card, main.skills div.megacontenedor section.loc div.skill-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 40px;
+  background-color: #0E141B;
+  padding: 20px;
+  border-radius: 30px;
+}
+main.skills div.megacontenedor section.idiomas div.skill-card h2, main.skills div.megacontenedor section.programacion div.skill-card h2, main.skills div.megacontenedor section.diseño div.skill-card h2, main.skills div.megacontenedor section.loc div.skill-card h2 {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 550;
   font-style: normal;
@@ -536,11 +552,7 @@ main.skills section h2 {
   text-align: center;
   margin-bottom: 20px;
 }
-main.skills section .container {
-  border: 1.5px;
-  border-color: aliceblue;
-}
-main.skills section .container p.lang {
+main.skills div.megacontenedor section.idiomas div.skill-card div.container p.lang, main.skills div.megacontenedor section.programacion div.skill-card div.container p.lang, main.skills div.megacontenedor section.diseño div.skill-card div.container p.lang, main.skills div.megacontenedor section.loc div.skill-card div.container p.lang {
   font-family: "Libre Baskerville", serif;
   font-weight: 550;
   font-style: normal;
@@ -549,13 +561,13 @@ main.skills section .container p.lang {
   text-align: justify;
   margin-bottom: 20px;
 }
-main.skills section .container p.separador {
+main.skills div.megacontenedor section.idiomas div.skill-card div.container div.progress div.progress-bar, main.skills div.megacontenedor section.programacion div.skill-card div.container div.progress div.progress-bar, main.skills div.megacontenedor section.diseño div.skill-card div.container div.progress div.progress-bar, main.skills div.megacontenedor section.loc div.skill-card div.container div.progress div.progress-bar {
+  background-color: #ff5277;
+}
+main.skills div.megacontenedor section.idiomas div.skill-card div.container p.separador, main.skills div.megacontenedor section.programacion div.skill-card div.container p.separador, main.skills div.megacontenedor section.diseño div.skill-card div.container p.separador, main.skills div.megacontenedor section.loc div.skill-card div.container p.separador {
   color: whitesmoke;
   text-align: center;
   margin-top: 20px;
-}
-main.skills section .container .progress-bar {
-  background-color: #ff5277;
 }
 
 @media screen and (min-width: 1024px) {
@@ -569,58 +581,67 @@ main.skills section .container .progress-bar {
   main.skills div.megacontenedor {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr;
+    grid-template-rows: auto auto;
+    gap: 50px;
+    margin-top: 0%;
+  }
+  main.skills div.megacontenedor section.idiomas div.skill-card, main.skills div.megacontenedor section.programacion div.skill-card, main.skills div.megacontenedor section.diseño div.skill-card, main.skills div.megacontenedor section.loc div.skill-card {
+    background-color: #0E141B;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 50px;
+    width: 100%;
+  }
+  main.skills div.megacontenedor section.idiomas div.skill-card, main.skills div.megacontenedor section.programacion div.skill-card, main.skills div.megacontenedor section.diseño div.skill-card, main.skills div.megacontenedor section.loc div.skill-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin-top: 0;
+  }
+  main.skills div.megacontenedor section.idiomas div.skill-card h2, main.skills div.megacontenedor section.programacion div.skill-card h2, main.skills div.megacontenedor section.diseño div.skill-card h2, main.skills div.megacontenedor section.loc div.skill-card h2 {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 550;
+    font-style: normal;
+    font-size: 130%;
+    color: #ff5277 !important;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  main.skills div.megacontenedor section.idiomas div.skill-card div.container p.lang, main.skills div.megacontenedor section.programacion div.skill-card div.container p.lang, main.skills div.megacontenedor section.diseño div.skill-card div.container p.lang, main.skills div.megacontenedor section.loc div.skill-card div.container p.lang {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 550;
+    font-style: normal;
+    font-size: 100%;
+    color: whitesmoke;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  main.skills div.megacontenedor section.idiomas div.skill-card div.container div.progress div.progress-bar, main.skills div.megacontenedor section.programacion div.skill-card div.container div.progress div.progress-bar, main.skills div.megacontenedor section.diseño div.skill-card div.container div.progress div.progress-bar, main.skills div.megacontenedor section.loc div.skill-card div.container div.progress div.progress-bar {
+    background-color: #ff5277;
+  }
+  main.skills div.megacontenedor section.idiomas div.skill-card div.container p.separador, main.skills div.megacontenedor section.programacion div.skill-card div.container p.separador, main.skills div.megacontenedor section.diseño div.skill-card div.container p.separador, main.skills div.megacontenedor section.loc div.skill-card div.container p.separador {
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 20px;
   }
   main.skills div.megacontenedor section.idiomas {
-    grid-column: 1;
-    grid-row: 1;
-    border: 0;
-  }
-  main.skills div.megacontenedor section.idiomas div.skill-card {
-    background-color: #0E141B;
-    padding: 20px;
-    border-radius: 10px;
-    gap: 50px;
-    width: 100%;
-  }
-  main.skills div.megacontenedor section.programacion {
     grid-column: 2;
     grid-row: 1;
-    border: 0;
-    grid-row: span 2;
   }
-  main.skills div.megacontenedor section.programacion div.skill-card {
-    background-color: #0E141B;
-    padding: 20px;
-    border-radius: 10px;
-    gap: 50px;
-    width: 100%;
+  main.skills div.megacontenedor section.programacion {
+    grid-column: 1;
+    grid-row: span 2;
+    margin-top: 0;
   }
   main.skills div.megacontenedor section.diseño {
     grid-column: 3;
     grid-row: 1;
-    border: 0;
-  }
-  main.skills div.megacontenedor section.diseño div.skill-card {
-    background-color: #0E141B;
-    padding: 20px;
-    border-radius: 10px;
-    gap: 50px;
-    width: 100%;
   }
   main.skills div.megacontenedor section.loc {
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 2;
-    border: 0;
   }
-  main.skills div.megacontenedor section.loc div.skill-card {
-    background-color: #0E141B;
-    padding: 20px;
-    border-radius: 10px;
-    gap: 50px;
-    width: 100%;
-  }
-  main.skills h1 {
+  main.skills div.megacontenedor h1 {
     text-align: left;
     margin-left: 150px;
   }

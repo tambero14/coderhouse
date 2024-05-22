@@ -13,42 +13,56 @@ main.skills {
         h1 {
             @include titulo-main;
         }
-        section {
-            border: 1px solid white;
-            padding: 20px;
-            h2 {
-                font-family: $subtitulo;
-                font-weight: 550;
-                font-style: normal;
-                font-size: 130%;
-                color: $color-font-copete !important;
-                text-align: center;
-                margin-bottom: 20px;
+        div.megacontenedor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            section.idiomas, section.programacion, section.diseño, section.loc {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 50px; 
+                div.skill-card {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                    gap: 40px;
+                    background-color: $color-nav-foot;
+                    padding: 20px;
+                    border-radius: 30px;
+                    h2 {
+                        font-family: $subtitulo;
+                        font-weight: 550;
+                        font-style: normal;
+                        font-size: 130%;
+                        color: $color-font-copete !important;
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+                    div.container {
+                        p.lang {
+                            font-family: $parrafo;
+                            font-weight: 550;
+                            font-style:normal;
+                            font-size: 100%;
+                            color: $color-font;
+                            text-align: justify;
+                            margin-bottom: 20px;  
+                        }
+                        div.progress div.progress-bar {
+                            background-color: #ff5277;
+                        }
+                        p.separador {
+                        color: $color-font;
+                        text-align: center;
+                        margin-top: 20px;  
+                        }
+                    }
+                }
             }
-            
-            .container {
-                border: 1.5px;
-                border-color: aliceblue;
-                p.lang {
-                    font-family: $parrafo;
-                    font-weight: 550;
-                    font-style:normal;
-                    font-size: 100%;
-                    color: $color-font;
-                    text-align: justify;
-                    margin-bottom: 20px;  
-                }
-                p.separador {
-                    color: $color-font;
-                    text-align: center;
-                    margin-top: 20px;
-                }
-                .progress-bar {
-                    background-color: #ff5277;
-                }
-            }
+        }
     }
-}
+
 
 // resolución PC desktop
 @media screen and (min-width: 1024px) {
@@ -61,36 +75,67 @@ main.skills {
         div.megacontenedor {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 2fr;
-            section.idiomas {
-                grid-column: 1;
-                grid-row: 1;
-                border: 0;
-                @include card-azul;
+            grid-template-rows: auto auto;
+            gap: 50px;
+            margin-top: 0%;
+            section.idiomas, section.programacion, section.diseño, section.loc {
+                @include card-azul;        
+                div.skill-card {
+                    display: grid;
+                    grid-template-columns: 1fr; 
+                    grid-template-rows: auto;
+                    margin-top: 0;
+                    h2 {
+                        font-family: $subtitulo;
+                        font-weight: 550;
+                        font-style: normal;
+                        font-size: 130%;
+                        color: $color-font-copete !important;
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+                    div.container {
+                        p.lang {
+                            font-family: $parrafo;
+                            font-weight: 550;
+                            font-style:normal;
+                            font-size: 100%;
+                            color: $color-font;
+                            text-align: justify;
+                            margin-bottom: 20px;  
+                        }
+                        div.progress div.progress-bar {
+                            background-color: #ff5277;
+                        }
+                        p.separador {
+                        color: $color-font;
+                        text-align: center;
+                        margin-top: 20px;  
+                        }
+                    }
+                }
             }
-            section.programacion {
+            section.idiomas {
                 grid-column: 2;
                 grid-row: 1;
-                border: 0;
+            }
+            section.programacion {
+                grid-column: 1;
                 grid-row: span 2;
-                @include card-azul;
+                margin-top: 0;
             }
             section.diseño {
                 grid-column: 3;
                 grid-row: 1;
-                border: 0;
-                @include card-azul;
             }
             section.loc {
-                grid-column: 1;
+                grid-column: 2;
                 grid-row: 2;
-                border: 0;
-                @include card-azul;
-            }
-        }
+            }    
         h1 { 
             text-align: left;
             margin-left: 150px;
         }
     }
- }
+    }
+}
