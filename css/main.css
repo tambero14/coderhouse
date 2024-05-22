@@ -675,42 +675,51 @@ main.contacto h1 {
   color: whitesmoke;
   text-align: center;
 }
-main.contacto section.form button.btn {
+main.contacto div.contacto-elementos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 40px;
+  background-color: #0E141B;
+  padding: 20px;
+  border-radius: 30px;
+}
+main.contacto div.contacto-elementos section.form button.btn {
   background-color: #ff5277;
   border-color: #ff5277;
   border-radius: 20%;
 }
-main.contacto section.form label {
+main.contacto div.contacto-elementos section.form label {
   font-family: "Libre Baskerville", serif;
 }
-main.contacto p.nota {
+main.contacto div.contacto-elementos p.nota {
   font-family: "Libre Baskerville", serif;
   color: whitesmoke;
 }
-main.contacto section.datos {
+main.contacto div.contacto-elementos section.datos {
   gap: 30px;
 }
-main.contacto section.datos .mail {
+main.contacto div.contacto-elementos section.datos .mail {
   display: flex;
   gap: 30px;
   margin-bottom: 20px;
 }
-main.contacto section.datos .info p {
+main.contacto div.contacto-elementos section.datos .info p {
   color: whitesmoke;
 }
-main.contacto section.datos .cel {
+main.contacto div.contacto-elementos section.datos .cel {
   display: flex;
   gap: 30px;
   margin-bottom: 20px;
 }
-main.contacto section.datos .ubi {
+main.contacto div.contacto-elementos section.datos .ubi {
   display: flex;
   gap: 30px;
 }
-main.contacto section.datos p {
+main.contacto div.contacto-elementos section.datos p {
   font-family: "Libre Baskerville", serif;
 }
-main.contacto .icono img, main.contacto section.datos .cel img, main.contacto section.datos .ubi img {
+main.contacto div.contacto-elementos .icono img, main.contacto div.contacto-elementos section.datos .cel img, main.contacto div.contacto-elementos section.datos .ubi img {
   width: 25px;
 }
 
@@ -748,6 +757,7 @@ main.contacto .icono img, main.contacto section.datos .cel img, main.contacto se
     border-radius: 10px;
     border: 0;
     width: 30%;
+    height: auto;
   }
   main.contacto section.datos div.mail div.icono img, main.contacto section.datos div.cel div.cel img, main.contacto section.datos div.ubi div.ubi img {
     border: 0;

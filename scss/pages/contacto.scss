@@ -10,55 +10,59 @@ main.contacto {
     grid-template-rows: auto auto;
     gap: 30px;
     margin: 50px;
-        h1 {
-            @include titulo-main;
+    h1 {
+        @include titulo-main;
+    }
+    div.contacto-elementos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 40px;
+        background-color: $color-nav-foot;
+        padding: 20px;
+        border-radius: 30px;
+        section.form {
+            button.btn {
+                background-color: $color-font-copete;
+                border-color: $color-font-copete;
+                border-radius: 20%;
+            }
+            label {
+                font-family: $parrafo;
+            }
         }
-    section.form {
-        button.btn {
-            background-color: $color-font-copete;
-            border-color: $color-font-copete;
-            border-radius: 20%;
-        }
-        label {
+        p.nota {
             font-family: $parrafo;
-        }
-    }
-
-    p.nota {
-        font-family: $parrafo;
-        color: $color-font;
-    }
-
-    section.datos {
-        gap: 30px;
-        .mail {
-            display: flex;
-            gap: 30px;
-            margin-bottom: 20px;
-        }
-        .info p {
             color: $color-font;
         }
-        
-        .cel {
-            display: flex;
-            gap: 30px; 
-            margin-bottom: 20px;
-        }
-        .ubi {
-            display: flex;
-            gap: 30px;
-        }
-        p {
-            font-family: $parrafo;
-        }
-    }
-
+        section.datos {
+        gap: 30px;
+            .mail {
+                display: flex;
+                gap: 30px;
+                margin-bottom: 20px;
+            }
+            .info p {
+                color: $color-font;
+            }        
+            .cel {
+                display: flex;
+                gap: 30px; 
+                margin-bottom: 20px;
+            }
+            .ubi {
+                display: flex;
+                gap: 30px;
+            }
+            p {
+                font-family: $parrafo;
+            }
+        }     
         .icono img, section.datos .cel img, section.datos .ubi img {
             width: 25px;
         }   
+    }
 }
-
 
 // resolución PC desktop (para tablet queda responsive también!)
 @media screen and (min-width: 1024px) {
@@ -94,6 +98,7 @@ main.contacto {
             border-radius: 10px;
             border: 0;
             width: 30%;
+            height: auto;
             div.mail div.icono img, div.cel div.cel img, div.ubi div.ubi img {
                 border: 0;
                 object-fit: contain;
