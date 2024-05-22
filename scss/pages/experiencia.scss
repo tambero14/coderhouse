@@ -9,37 +9,50 @@ main.experiencia {
     margin: 50px;
         h1 {
             @include titulo-main;
-        }
-        section {
-            border: 1px solid white;
-            padding: 20px;
-            div {
-                gap: 10px;
-                div.imagen img.exp {
-                    max-width: 100%; 
-                    height: auto; 
-                    margin-bottom: 10px; 
-                }
+        } 
+        div.contenido-centrado {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            section.experiencia {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 50px; 
+                div.tarjeta {
+                    display: grid;
+                    grid-template-columns: 1fr 3fr;
+                    grid-template-rows: auto;
+                    gap: 40px;
+                    background-color: $color-nav-foot;
+                    padding: 20px;
+                    border-radius: 30px;
+                    div.imagen img.exp {
+                        max-width: 100%; 
+                        height: auto; 
+                        margin-bottom: 10px; 
+                    }
+                    div.content h3 {
+                        font-family: $subtitulo;
+                        font-weight: 550;
+                        font-style: normal;
+                        font-size: 130%;
+                        color: $color-font-copete !important;
+                        text-align: justify;
+                        margin-bottom: 20px;
+                    }
+                    div.content p.empresa, div.content p.descripcion {
+                        font-family: $parrafo;
+                        font-weight: 550;
+                        font-style:normal;
+                        font-size: 100%;
+                        color: $color-font;
+                        text-align: justify;
+                    }
+                }      
             }
-        }
-        section div h3 {
-            font-family: $subtitulo;
-            font-weight: 550;
-            font-style: normal;
-            font-size: 130%;
-            color: $color-font-copete !important;
-            text-align: justify;
-            margin-bottom: 20px;
-        }
-        section div p.empresa, section div p.descripcion {
-            font-family: $parrafo;
-            font-weight: 550;
-            font-style:normal;
-            font-size: 100%;
-            color: $color-font;
-            text-align: justify;
-        }
-}
+        }       
+    }
 
  // resolución PC desktop
  @media screen and (min-width: 1024px) {
