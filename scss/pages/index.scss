@@ -73,7 +73,7 @@ header {
             .navbar-nav .nav-link.active {
                 color: $color-font-copete !important;
                 font-size: 25px;
-               }
+            }
         }
         .navbar-collapse.show {
             display: block;
@@ -224,9 +224,9 @@ main {
                 display: flex;
                 gap: 100px; 
                 div.img {
-                    width: 50%; /* O ajusta el ancho según sea necesario */
-                    height: auto; /* Ajusta la altura automáticamente según el contenido */
-                    overflow: hidden; /* Evita que el contenedor se expanda más allá del tamaño de la imagen */
+                    width: 50%; 
+                    height: auto; 
+                    overflow: hidden; 
                     margin-bottom: 50px;
                     img {
                         max-width: 100%;

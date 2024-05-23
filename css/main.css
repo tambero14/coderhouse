@@ -275,9 +275,9 @@ footer nav ul li a img {
     gap: 100px;
   }
   main div.container-main div.img {
-    width: 50%; /* O ajusta el ancho según sea necesario */
-    height: auto; /* Ajusta la altura automáticamente según el contenido */
-    overflow: hidden; /* Evita que el contenedor se expanda más allá del tamaño de la imagen */
+    width: 50%;
+    height: auto;
+    overflow: hidden;
     margin-bottom: 50px;
   }
   main div.container-main div.img img {
@@ -572,7 +572,7 @@ main.skills div.megacontenedor section.idiomas, main.skills div.megacontenedor s
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
-  width: 100%; /* ESTO ACABO DE AGREGAR! Asegura que los sections ocupen todo el ancho disponible */
+  width: 100%;
 }
 main.skills div.megacontenedor section.idiomas div.skill-card, main.skills div.megacontenedor section.programacion div.skill-card, main.skills div.megacontenedor section.diseño div.skill-card, main.skills div.megacontenedor section.loc div.skill-card {
   display: grid;
@@ -582,8 +582,8 @@ main.skills div.megacontenedor section.idiomas div.skill-card, main.skills div.m
   background-color: #0E141B;
   padding: 20px;
   border-radius: 30px;
-  width: 100%; /* Extiende el ancho de las tarjetas para que ocupen todo el espacio del contenedor */
-  max-width: 600px; /* Puedes establecer un ancho máximo para mantener un diseño más consistente */
+  width: 100%;
+  max-width: 600px;
 }
 main.skills div.megacontenedor section.idiomas div.skill-card h2, main.skills div.megacontenedor section.programacion div.skill-card h2, main.skills div.megacontenedor section.diseño div.skill-card h2, main.skills div.megacontenedor section.loc div.skill-card h2 {
   font-family: "Lexend Deca", sans-serif;
@@ -782,7 +782,7 @@ main.contacto div.contacto-elementos .icono img, main.contacto div.contacto-elem
   }
   main.contacto div.contacto-elementos {
     display: flex;
-    gap: 150px;
+    gap: 30px;
     background-color: #23272A;
   }
   main.contacto div.contacto-elementos p.nota {

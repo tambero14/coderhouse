@@ -22,7 +22,7 @@ main.skills {
                 flex-direction: column;
                 align-items: center;
                 margin-bottom: 50px; 
-                width: 100%; /* ESTO ACABO DE AGREGAR! Asegura que los sections ocupen todo el ancho disponible */
+                width: 100%; 
                 div.skill-card {
                     display: grid;
                     grid-template-columns: 1fr;
@@ -31,8 +31,8 @@ main.skills {
                     background-color: $color-nav-foot;
                     padding: 20px;
                     border-radius: 30px;
-                    width: 100%; /* Extiende el ancho de las tarjetas para que ocupen todo el espacio del contenedor */
-                    max-width: 600px; /* Puedes establecer un ancho máximo para mantener un diseño más consistente */
+                    width: 100%; 
+                    max-width: 600px; 
                     h2 {
                         font-family: $subtitulo;
                         font-weight: 550;
@@ -142,7 +142,6 @@ main.skills {
                 grid-column: 2;
                 grid-row: 2;
             }    
-
-    }
+        }
     }
 }
