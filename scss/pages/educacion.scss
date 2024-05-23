@@ -11,7 +11,7 @@ main.contenedor {
     gap: 30px;
     margin: 50px;
     h1 {
-        @include titulo-main;
+        @include titulo-main-mobile;
     }
     div.container-edu {
         display: flex;

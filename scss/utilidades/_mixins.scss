@@ -22,7 +22,7 @@
 }
 
 
-// mixing para título principal de cada HTML
+/* mixing para título principal de cada HTML en desktop */
 @mixin titulo-main {
         margin-top: 10px;
         font-family: $titulo-main;
@@ -32,6 +32,33 @@
         color: $color-font;
         text-align: center;
 }
+
+/* mixing para título principal de cada HTML en celular */
+@mixin titulo-main-mobile {
+        margin-top: 10px;
+        font-family: $titulo-main;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 450%;
+        color: $color-font;
+        text-align: center;
+}
+
+/* subtítulo principal para cada HTML desktop*/
+
+/* subtítulo principal para cada HTML en celular */
+@mixin subtitulo-main-mobile {
+        font-family: $subtitulo;
+        font-weight: 550;
+        font-style:normal;
+        font-size: 150%;
+        color: $color-font-copete;
+        text-align: center;
+        margin-bottom: 50px;
+}
+
+
+
 
 /* mixing para el footer */
 /* celular */
@@ -62,12 +89,18 @@
         display: flex;
         justify-content: center;
         img {
-        width: 20rem;
-        height: 20rem;
-        border-style:groove;
+        // width: 20rem;
+        // height: 20rem;
+        // border-style:groove;
+        // border-radius: 25%;
+        // border-color: whitesmoke;
+        // margin-bottom: 100px;
+        max-width: 100%;
+        height: auto;
+        border-style: groove;
         border-radius: 25%;
         border-color: whitesmoke;
-        margin-bottom: 100px;
+
         }
 }
 

@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* mixing para estilo de header */
+/* mixing para título principal de cada HTML en desktop */
+/* mixing para título principal de cada HTML en celular */
+/* subtítulo principal para cada HTML desktop*/
+/* subtítulo principal para cada HTML en celular */
 /* mixing para el footer */
 /* celular */
 /* desktop */
@@ -100,15 +104,15 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  gap: 30px;
-  margin: 50px;
+  gap: 15px;
+  margin: 30px;
 }
 main div.texto h1 {
   margin-top: 10px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 650%;
+  font-size: 450%;
   color: whitesmoke;
   text-align: center;
 }
@@ -116,10 +120,10 @@ main div.texto h2 {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 550;
   font-style: normal;
-  font-size: 200%;
+  font-size: 150%;
   color: #ff5277;
   text-align: center;
-  margin-bottom: 75px;
+  margin-bottom: 50px;
 }
 main div.texto p {
   font-family: "Libre Baskerville", serif;
@@ -134,12 +138,11 @@ main .img {
   justify-content: center;
 }
 main .img img {
-  width: 20rem;
-  height: 20rem;
+  max-width: 100%;
+  height: auto;
   border-style: groove;
   border-radius: 25%;
   border-color: whitesmoke;
-  margin-bottom: 100px;
 }
 
 footer {
@@ -276,6 +279,10 @@ footer nav ul li a img {
   }
 }
 /* mixing para estilo de header */
+/* mixing para título principal de cada HTML en desktop */
+/* mixing para título principal de cada HTML en celular */
+/* subtítulo principal para cada HTML desktop*/
+/* subtítulo principal para cada HTML en celular */
 /* mixing para el footer */
 /* celular */
 /* desktop */
@@ -299,7 +306,7 @@ main.contenedor h1 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 650%;
+  font-size: 450%;
   color: whitesmoke;
   text-align: center;
 }
@@ -405,7 +412,7 @@ main.experiencia h1 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 650%;
+  font-size: 450%;
   color: whitesmoke;
   text-align: center;
 }
@@ -496,6 +503,10 @@ main.experiencia div.contenido-centrado section.experiencia div.tarjeta div.cont
   }
 }
 /* mixing para estilo de header */
+/* mixing para título principal de cada HTML en desktop */
+/* mixing para título principal de cada HTML en celular */
+/* subtítulo principal para cada HTML desktop*/
+/* subtítulo principal para cada HTML en celular */
 /* mixing para el footer */
 /* celular */
 /* desktop */
@@ -510,7 +521,7 @@ main.experiencia div.contenido-centrado section.experiencia div.tarjeta div.cont
 main.skills {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto;
   gap: 30px;
   margin: 50px;
 }
@@ -519,7 +530,7 @@ main.skills h1 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 650%;
+  font-size: 450%;
   color: whitesmoke;
   text-align: center;
 }
@@ -533,6 +544,7 @@ main.skills div.megacontenedor section.idiomas, main.skills div.megacontenedor s
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
+  width: 100%; /* ESTO ACABO DE AGREGAR! Asegura que los sections ocupen todo el ancho disponible */
 }
 main.skills div.megacontenedor section.idiomas div.skill-card, main.skills div.megacontenedor section.programacion div.skill-card, main.skills div.megacontenedor section.diseño div.skill-card, main.skills div.megacontenedor section.loc div.skill-card {
   display: grid;
@@ -542,6 +554,8 @@ main.skills div.megacontenedor section.idiomas div.skill-card, main.skills div.m
   background-color: #0E141B;
   padding: 20px;
   border-radius: 30px;
+  width: 100%; /* Extiende el ancho de las tarjetas para que ocupen todo el espacio del contenedor */
+  max-width: 600px; /* Puedes establecer un ancho máximo para mantener un diseño más consistente */
 }
 main.skills div.megacontenedor section.idiomas div.skill-card h2, main.skills div.megacontenedor section.programacion div.skill-card h2, main.skills div.megacontenedor section.diseño div.skill-card h2, main.skills div.megacontenedor section.loc div.skill-card h2 {
   font-family: "Lexend Deca", sans-serif;
@@ -648,6 +662,10 @@ main.skills div.megacontenedor section.idiomas div.skill-card div.container p.se
   }
 }
 /* mixing para estilo de header */
+/* mixing para título principal de cada HTML en desktop */
+/* mixing para título principal de cada HTML en celular */
+/* subtítulo principal para cada HTML desktop*/
+/* subtítulo principal para cada HTML en celular */
 /* mixing para el footer */
 /* celular */
 /* desktop */
@@ -671,7 +689,7 @@ main.contacto h1 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 650%;
+  font-size: 450%;
   color: whitesmoke;
   text-align: center;
 }

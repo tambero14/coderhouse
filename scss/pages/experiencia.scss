@@ -8,7 +8,7 @@ main.experiencia {
     gap: 30px;
     margin: 50px;
         h1 {
-            @include titulo-main;
+            @include titulo-main-mobile;
         } 
         div.contenido-centrado {
             display: flex;

@@ -7,11 +7,11 @@
 main.skills {
     display: grid;
     grid-template-columns: 1fr ;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     gap: 30px;
     margin: 50px;
         h1 {
-            @include titulo-main;
+            @include titulo-main-mobile;
         }
         div.megacontenedor {
             display: flex;
@@ -22,6 +22,7 @@ main.skills {
                 flex-direction: column;
                 align-items: center;
                 margin-bottom: 50px; 
+                width: 100%; /* ESTO ACABO DE AGREGAR! Asegura que los sections ocupen todo el ancho disponible */
                 div.skill-card {
                     display: grid;
                     grid-template-columns: 1fr;
@@ -30,6 +31,8 @@ main.skills {
                     background-color: $color-nav-foot;
                     padding: 20px;
                     border-radius: 30px;
+                    width: 100%; /* Extiende el ancho de las tarjetas para que ocupen todo el espacio del contenedor */
+                    max-width: 600px; /* Puedes establecer un ancho máximo para mantener un diseño más consistente */
                     h2 {
                         font-family: $subtitulo;
                         font-weight: 550;

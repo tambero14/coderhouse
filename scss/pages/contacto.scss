@@ -11,7 +11,7 @@ main.contacto {
     gap: 30px;
     margin: 50px;
     h1 {
-        @include titulo-main;
+        @include titulo-main-mobile;
     }
     div.contacto-elementos {
         display: grid;
