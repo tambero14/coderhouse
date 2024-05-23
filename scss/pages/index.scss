@@ -22,7 +22,7 @@ header {
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        border-color: aliceblue;    
+        border-color: aliceblue;  
     }
         
     // estilos para el <nav>
@@ -133,35 +133,7 @@ main {
     // estilos de footer
     footer {
         @include footer_celu;
-        p.legal {
-            font-family: "Lexend Deca", sans-serif;
-            font-weight: 200;
-            font-style: normal;
-            font-size: 100%;
-            color: $color-font;
-        }
-        p.nombre {
-            font-family: "Lexend Deca", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 100%;
-            color: $color-font;
-        }
-        nav {
-            ul {
-                list-style: none;
-                display: flex;
-                gap: 15px;
-                    li {
-                        a {
-                            img {
-                                height: 1.5em;
-                                width: 1.5em;
-                            }
-                        }
-                    }
-                }
-            }
+        @include footer_texto_celu;
     }
 
     // resolución tablet
@@ -206,6 +178,9 @@ main {
         gap: 300px;
         div.texto {
             width: 800px;
+            h1 {
+                @include titulo-main;
+            }
         }
         div.texto h1, div.texto h2, div.texto p {
             text-align: left;

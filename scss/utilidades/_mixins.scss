@@ -71,6 +71,43 @@
         justify-content: center;
 }
 
+@mixin footer_texto_celu {
+        p.legal {
+                font-family: "Lexend Deca", sans-serif;
+                font-weight: 200;
+                font-style: normal;
+                font-size: 70%;
+                color: $color-font;
+                text-align: center;
+            }
+            p.nombre {
+                margin-left: 10px;
+                font-family: "Lexend Deca", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 75%;
+                color: $color-font;
+            }
+            nav {
+                ul {
+                    list-style: none;
+                    display: flex;
+                    gap: 15px;
+                    margin-right: 10px;
+                        li {
+                            a {
+                                img {
+                                    height: 1.5em;
+                                    width: 1.5em;
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+
+
+
 /* desktop */
 @mixin footer_desktop {
         bottom: 0;

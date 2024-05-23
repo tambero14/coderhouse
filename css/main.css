@@ -157,20 +157,23 @@ footer p.legal {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 200;
   font-style: normal;
-  font-size: 100%;
+  font-size: 70%;
   color: whitesmoke;
+  text-align: center;
 }
 footer p.nombre {
+  margin-left: 10px;
   font-family: "Lexend Deca", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 100%;
+  font-size: 75%;
   color: whitesmoke;
 }
 footer nav ul {
   list-style: none;
   display: flex;
   gap: 15px;
+  margin-right: 10px;
 }
 footer nav ul li a img {
   height: 1.5em;
@@ -218,6 +221,15 @@ footer nav ul li a img {
   }
   main div.texto {
     width: 800px;
+  }
+  main div.texto h1 {
+    margin-top: 10px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 650%;
+    color: whitesmoke;
+    text-align: center;
   }
   main div.texto h1, main div.texto h2, main div.texto p {
     text-align: left;
@@ -360,9 +372,6 @@ main.contenedor div.container-edu section.educacion div.tarjeta div.referencia p
 @media screen and (min-width: 1024px) {
   main.contenedor {
     margin-bottom: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   main.contenedor h1 {
     text-align: left;
@@ -525,7 +534,7 @@ main.skills {
   gap: 30px;
   margin: 50px;
 }
-main.skills h1 {
+main.skills div.titulo h1 {
   margin-top: 10px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -592,6 +601,17 @@ main.skills div.megacontenedor section.idiomas div.skill-card div.container p.se
     grid-template-rows: 2fr;
     gap: 30px;
   }
+  main.skills div.titulo h1 {
+    margin-top: 10px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 450%;
+    color: whitesmoke;
+    text-align: center;
+    text-align: left;
+    margin-left: 150px;
+  }
   main.skills div.megacontenedor {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -655,10 +675,6 @@ main.skills div.megacontenedor section.idiomas div.skill-card div.container p.se
   main.skills div.megacontenedor section.loc {
     grid-column: 2;
     grid-row: 2;
-  }
-  main.skills div.megacontenedor h1 {
-    text-align: left;
-    margin-left: 150px;
   }
 }
 /* mixing para estilo de header */
