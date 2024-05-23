@@ -188,6 +188,25 @@ footer nav ul li a img {
     gap: 30px;
     margin: 50px;
   }
+  main .img {
+    display: flex;
+    justify-content: center;
+  }
+  main .img img {
+    max-width: 100%;
+    height: auto;
+    border-style: groove;
+    border-radius: 25%;
+    border-color: whitesmoke;
+  }
+  main .img img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 0%;
+    border-style: groove;
+    border-color: whitesmoke;
+  }
 }
 @media screen and (min-width: 1024px) {
   header a img:hover {
@@ -216,11 +235,9 @@ footer nav ul li a img {
     color: #ff5277 !important;
     transform: scale(1.1);
   }
-  main {
-    gap: 300px;
-  }
   main div.texto {
     width: 800px;
+    height: auto;
   }
   main div.texto h1 {
     margin-top: 10px;
@@ -243,7 +260,7 @@ footer nav ul li a img {
     text-decoration: solid;
     text-align: justify;
   }
-  main .img img {
+  main .img div img {
     width: 100%;
     height: 50%;
     object-fit: cover;
@@ -252,23 +269,26 @@ footer nav ul li a img {
     border-color: whitesmoke;
   }
 }
-@media screen and (min-width: 1024px) and (min-width: 1400px) {
-  main {
-    gap: 300px;
+@media screen and (min-width: 1400px) {
+  main div.container-main {
+    display: flex;
+    gap: 100px;
   }
-  main div img {
-    width: 100%;
-    height: 50%;
+  main div.container-main div.img {
+    width: 50%; /* O ajusta el ancho según sea necesario */
+    height: auto; /* Ajusta la altura automáticamente según el contenido */
+    overflow: hidden; /* Evita que el contenedor se expanda más allá del tamaño de la imagen */
+    margin-bottom: 50px;
+  }
+  main div.container-main div.img img {
+    max-width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 0%;
     border-style: groove;
     border-color: whitesmoke;
   }
-  main .container-main {
-    display: flex;
-    gap: 100px;
-  }
-  main .texto h1 {
+  main div.container-main div.img .texto h1 {
     margin-top: 10px;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
@@ -276,9 +296,8 @@ footer nav ul li a img {
     font-size: 650%;
     color: whitesmoke;
     text-align: center;
+    text-align: left;
   }
-}
-@media screen and (min-width: 1024px) {
   footer {
     bottom: 0;
     width: 100%;
