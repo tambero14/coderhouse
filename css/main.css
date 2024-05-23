@@ -432,8 +432,8 @@ main.experiencia {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  gap: 30px;
-  margin: 50px;
+  gap: 10px;
+  margin: 10px;
 }
 main.experiencia h1 {
   margin-top: 10px;
@@ -459,7 +459,7 @@ main.experiencia div.contenido-centrado section.experiencia div.tarjeta {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: auto;
-  gap: 40px;
+  gap: 20px;
   background-color: #0E141B;
   padding: 20px;
   border-radius: 30px;

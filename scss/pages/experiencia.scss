@@ -5,8 +5,8 @@ main.experiencia {
     display: grid;
     grid-template-columns: 1fr ;
     grid-template-rows: auto auto;
-    gap: 30px;
-    margin: 50px;
+    gap: 10px;
+    margin: 10px;
         h1 {
             @include titulo-main-mobile;
         } 
@@ -23,7 +23,7 @@ main.experiencia {
                     display: grid;
                     grid-template-columns: 1fr 3fr;
                     grid-template-rows: auto;
-                    gap: 40px;
+                    gap: 20px;
                     background-color: $color-nav-foot;
                     padding: 20px;
                     border-radius: 30px;
